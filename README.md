@@ -26,6 +26,8 @@ Published at <https://muzhda-ahmadi7.github.io/eLearna-website/> by
 `.github/workflows/deploy-pages.yml` on every push to `main`.
 
 One-time setup: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+The workflow also re-points an already-enabled Pages site at the Actions source on every run, so a
+site created with "Deploy from a branch" self-corrects on the next push.
 
 Pages-specific details:
 
