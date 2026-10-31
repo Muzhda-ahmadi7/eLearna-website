@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getCourse, courses } from '../data/courses';
@@ -36,7 +37,7 @@ function CourseCard({ course }) {
       </div>
       <div className="course-wrap-main-content">
         <div className="course-three-rating">
-          <img src="/assets/img/rating.svg" alt="rating star" />
+          <img src={asset("/assets/img/rating.svg")} alt="rating star" />
           <div className="course-rating-text">{course.rating}</div>
         </div>
         <h4>{course.title}</h4>
@@ -91,7 +92,7 @@ export default function CourseDetails() {
           <div className="course-hero-category">{course.category}</div>
           <h1>{course.title}</h1>
           <div className="course-three-rating">
-            <img src="/assets/img/rating.svg" alt="rating star" />
+            <img src={asset("/assets/img/rating.svg")} alt="rating star" />
             <div className="course-rating-text">{course.rating}</div>
           </div>
         </div>
@@ -101,11 +102,11 @@ export default function CourseDetails() {
         <div className="container">
           <div className="course-short-information-main">
             {[
-              { icon: '/assets/img/clock-icons-2.svg', label: 'Time span', value: '4 weeks' },
-              { icon: '/assets/img/books-icons.svg', label: 'Lectures', value: '6 Lessons' },
-              { icon: '/assets/img/skills-arrow.svg', label: 'Skill level', value: 'Intermediate' },
-              { icon: '/assets/img/video-icons.svg', label: 'Video lessons', value: '5 hours' },
-              { icon: '/assets/img/persons.svg', label: 'Students', value: '12k Enrolled' },
+              { icon: asset('/assets/img/clock-icons-2.svg'), label: 'Time span', value: '4 weeks' },
+              { icon: asset('/assets/img/books-icons.svg'), label: 'Lectures', value: '6 Lessons' },
+              { icon: asset('/assets/img/skills-arrow.svg'), label: 'Skill level', value: 'Intermediate' },
+              { icon: asset('/assets/img/video-icons.svg'), label: 'Video lessons', value: '5 hours' },
+              { icon: asset('/assets/img/persons.svg'), label: 'Students', value: '12k Enrolled' },
             ].map((box, i, arr) => (
               <div
                 key={box.label}

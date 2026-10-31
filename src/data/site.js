@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 // Shared site-wide content taken from the reference website.
 
 export const contactInfo = {
@@ -10,12 +11,12 @@ export const contactInfo = {
 }
 
 export const clientLogos = [
-  '/assets/img/clients-logo.svg',
-  '/assets/img/clients-logo-4.svg',
-  '/assets/img/clients-logo-6.svg',
-  '/assets/img/clients-logo-2.svg',
-  '/assets/img/clients-logo-3.svg',
-  '/assets/img/clients-logo-5.svg',
+  asset('/assets/img/clients-logo.svg'),
+  asset('/assets/img/clients-logo-4.svg'),
+  asset('/assets/img/clients-logo-6.svg'),
+  asset('/assets/img/clients-logo-2.svg'),
+  asset('/assets/img/clients-logo-3.svg'),
+  asset('/assets/img/clients-logo-5.svg'),
 ]
 
 export const courseCategories = [
@@ -27,10 +28,10 @@ export const courseCategories = [
 
 // Home Three "Top Categories" cards (image cards)
 export const homeThreeCategories = [
-  { name: 'Web design and creative', image: '/assets/img/category-image.webp', slug: 'design' },
-  { name: 'Finance and accounting', image: '/assets/img/category-image-2.webp', slug: 'finance' },
-  { name: 'Technology and software', image: '/assets/img/category-image-3.webp', slug: 'development' },
-  { name: 'Digital marketing', image: '/assets/img/digital-marketing.webp', slug: 'management' },
+  { name: 'Web design and creative', image: asset('/assets/img/category-image.webp'), slug: 'design' },
+  { name: 'Finance and accounting', image: asset('/assets/img/category-image-2.webp'), slug: 'finance' },
+  { name: 'Technology and software', image: asset('/assets/img/category-image-3.webp'), slug: 'development' },
+  { name: 'Digital marketing', image: asset('/assets/img/digital-marketing.webp'), slug: 'management' },
 ]
 
 // Home Three "Unlocking Potential" numbered cards
@@ -63,12 +64,12 @@ export const potentialCards = [
 
 // Home One "Top categories" cards (6 icon cards).
 export const homeOneCategories = [
-  { name: 'Creative web design', count: 8, icon: '/assets/img/category-icons.svg', slug: 'design' },
-  { name: 'Finance accounting', count: 10, icon: '/assets/img/category-icons-2.svg', slug: 'finance' },
-  { name: 'IT and software', count: 5, icon: '/assets/img/category-icons.svg', slug: 'development' },
-  { name: 'Digital marketing', count: 4, icon: '/assets/img/category-icons-4.svg', slug: 'management' },
-  { name: 'Web development', count: 8, icon: '/assets/img/category-icons-5.svg', slug: 'development' },
-  { name: 'Content writing', count: 3, icon: '/assets/img/category-icons-6.svg', slug: 'design' },
+  { name: 'Creative web design', count: 8, icon: asset('/assets/img/category-icons.svg'), slug: 'design' },
+  { name: 'Finance accounting', count: 10, icon: asset('/assets/img/category-icons-2.svg'), slug: 'finance' },
+  { name: 'IT and software', count: 5, icon: asset('/assets/img/category-icons.svg'), slug: 'development' },
+  { name: 'Digital marketing', count: 4, icon: asset('/assets/img/category-icons-4.svg'), slug: 'management' },
+  { name: 'Web development', count: 8, icon: asset('/assets/img/category-icons-5.svg'), slug: 'development' },
+  { name: 'Content writing', count: 3, icon: asset('/assets/img/category-icons-6.svg'), slug: 'design' },
 ]
 
 // Home One testimonial band counters.
@@ -79,28 +80,28 @@ export const homeOneCounters = [
 
 // Course One / Course Three hero category cards
 export const courseHeroCategories = [
-  { name: 'Creative web design', count: 8, icon: '/assets/img/category-icons.svg', slug: 'design' },
-  { name: 'Finance accounting', count: 4, icon: '/assets/img/category-icons-2.svg', slug: 'finance' },
-  { name: 'IT and software', count: 5, icon: '/assets/img/category-icons-3.svg', slug: 'development' },
-  { name: 'Digital marketing', count: 4, icon: '/assets/img/category-icons-4.svg', slug: 'management' },
-  { name: 'Web development', count: 8, icon: '/assets/img/category-icons-5.svg', slug: 'development' },
-  { name: 'Content writing', count: 3, icon: '/assets/img/category-icons-6.svg', slug: 'design' },
+  { name: 'Creative web design', count: 8, icon: asset('/assets/img/category-icons.svg'), slug: 'design' },
+  { name: 'Finance accounting', count: 4, icon: asset('/assets/img/category-icons-2.svg'), slug: 'finance' },
+  { name: 'IT and software', count: 5, icon: asset('/assets/img/category-icons-3.svg'), slug: 'development' },
+  { name: 'Digital marketing', count: 4, icon: asset('/assets/img/category-icons-4.svg'), slug: 'management' },
+  { name: 'Web development', count: 8, icon: asset('/assets/img/category-icons-5.svg'), slug: 'development' },
+  { name: 'Content writing', count: 3, icon: asset('/assets/img/category-icons-6.svg'), slug: 'design' },
 ]
 
 // Home Three hero detail boxes
 export const heroDetails = [
   {
-    icon: '/assets/img/circle-icon-one.svg',
+    icon: asset('/assets/img/circle-icon-one.svg'),
     title: '150+ online courses',
     text: 'Lorem ipsum dolor sit amet',
   },
   {
-    icon: '/assets/img/circle-icon-two.svg',
+    icon: asset('/assets/img/circle-icon-two.svg'),
     title: 'Personalized learning',
     text: 'Lorem ipsum dolor sit amet',
   },
   {
-    icon: '/assets/img/circle-icon-three.svg',
+    icon: asset('/assets/img/circle-icon-three.svg'),
     title: 'Lifetime update',
     text: 'Lorem ipsum dolor sit amet',
   },
@@ -135,22 +136,22 @@ export const whyUs = {
   text: 'Lorem ipsum dolor sit amet consectetur. Pellentesque id quam mauris mus. Vitae diam dolor lacus amet integer ut.',
   features: [
     {
-      icon: '/assets/img/books-icons.svg',
+      icon: asset('/assets/img/books-icons.svg'),
       title: 'Learn anything',
       text: 'Lorem ipsum dolor sit amet conse non quis id viverra id proin.',
     },
     {
-      icon: '/assets/img/money-bag-icon.svg',
+      icon: asset('/assets/img/money-bag-icon.svg'),
       title: 'Save money',
       text: 'Lorem ipsum dolor sit amet conse non quis id viverra id proin.',
     },
     {
-      icon: '/assets/img/course-icon.svg',
+      icon: asset('/assets/img/course-icon.svg'),
       title: 'Flexible courses',
       text: 'Lorem ipsum dolor sit amet conse non quis id viverra id proin.',
     },
     {
-      icon: '/assets/img/verified-icon.svg',
+      icon: asset('/assets/img/verified-icon.svg'),
       title: 'Unlimited certificate',
       text: 'Lorem ipsum dolor sit amet conse non quis id viverra id proin.',
     },

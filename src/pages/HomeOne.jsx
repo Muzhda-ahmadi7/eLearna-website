@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { courses, courseFilters, getCourse } from '../data/courses'
@@ -10,7 +11,7 @@ import WhyUs from '../components/WhyUs'
 import JourneyCta from '../components/JourneyCta'
 import './HomeOne.css'
 
-const VIDEO_CONTROLS = '/assets/img/video-controls.svg'
+const VIDEO_CONTROLS = asset('/assets/img/video-controls.svg')
 
 // "All courses" order on the reference Home One page.
 const HOME_ONE_ORDER = [
@@ -66,14 +67,14 @@ export default function HomeOne() {
           <div className="home-one-hero-main">
             <div className="home-one-hero-image-wrap">
               <img
-                src="/assets/img/banner-girl.webp"
+                src={asset("/assets/img/banner-girl.webp")}
                 alt="Student smiling with a notebook"
                 width="677.5"
                 height="746"
                 className="hero-image-main reveal"
               />
               <img
-                src="/assets/img/achievements.webp"
+                src={asset("/assets/img/achievements.webp")}
                 alt="125+ achievement awards"
                 width="275"
                 height="93"
@@ -81,16 +82,16 @@ export default function HomeOne() {
                 style={{ transitionDelay: '260ms' }}
               />
               <img
-                src="/assets/img/trusted-by.avif"
+                src={asset("/assets/img/trusted-by.avif")}
                 alt="Trusted by 15000+ enrolled students"
                 width="268"
                 height="179"
                 className="trusted-by-image reveal"
                 style={{ transitionDelay: '340ms' }}
               />
-              <img src="/assets/img/half-moon.svg" alt="" className="half-moon reveal" aria-hidden="true" />
+              <img src={asset("/assets/img/half-moon.svg")} alt="" className="half-moon reveal" aria-hidden="true" />
               <img
-                src="/assets/img/yellow-dot.svg"
+                src={asset("/assets/img/yellow-dot.svg")}
                 alt=""
                 width="17"
                 height="17"
@@ -98,7 +99,7 @@ export default function HomeOne() {
                 aria-hidden="true"
               />
               <img
-                src="/assets/img/yellow-dot.svg"
+                src={asset("/assets/img/yellow-dot.svg")}
                 alt=""
                 width="11"
                 height="11"
@@ -106,7 +107,7 @@ export default function HomeOne() {
                 aria-hidden="true"
               />
               <img
-                src="/assets/img/blue-circle.svg"
+                src={asset("/assets/img/blue-circle.svg")}
                 alt=""
                 className="blue-circle reveal"
                 aria-hidden="true"
@@ -181,7 +182,7 @@ export default function HomeOne() {
                 </Link>
               </div>
               <img
-                src="/assets/img/woman-using-laptop.webp"
+                src={asset("/assets/img/woman-using-laptop.webp")}
                 alt="Woman studying online with a laptop"
                 width="421"
                 height="288"
@@ -200,7 +201,7 @@ export default function HomeOne() {
               <div className="quick-start-card-video">
                 <video
                   className="quick-start-video"
-                  poster="/assets/img/home-one-video-poster.jpg"
+                  poster={asset("/assets/img/home-one-video-poster.jpg")}
                   autoPlay
                   muted
                   loop
@@ -208,7 +209,7 @@ export default function HomeOne() {
                   preload="metadata"
                   aria-label="Preview of an online lesson"
                 >
-                  <source src="/assets/video/home-one-video.mp4" type="video/mp4" />
+                  <source src={asset("/assets/video/home-one-video.mp4")} type="video/mp4" />
                 </video>
                 <img src={VIDEO_CONTROLS} alt="" className="video-controls" />
               </div>
@@ -281,7 +282,7 @@ export default function HomeOne() {
               <div className="home-one-offer-images-left">
                 <div className="free-courses-image reveal">
                   <img
-                    src="/assets/img/free-course.avif"
+                    src={asset("/assets/img/free-course.avif")}
                     alt="50+ free courses listed online"
                     width="272"
                     height="94"
@@ -290,7 +291,7 @@ export default function HomeOne() {
                 </div>
                 <div className="home-one-offer-image-shadow reveal">
                   <img
-                    src="/assets/img/man-holding-graph.webp"
+                    src={asset("/assets/img/man-holding-graph.webp")}
                     alt="Student reviewing analytics"
                     width="362"
                     height="454"
@@ -300,7 +301,7 @@ export default function HomeOne() {
               </div>
               <div className="home-one-offer-image-right reveal">
                 <img
-                  src="/assets/img/woman-holding-tab.webp"
+                  src={asset("/assets/img/woman-holding-tab.webp")}
                   alt="Student learning on a tablet"
                   width="332"
                   height="434"

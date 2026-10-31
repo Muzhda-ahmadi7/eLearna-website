@@ -20,6 +20,20 @@ npm run dev     # http://localhost:5174
 npm run build   # production build to dist/
 ```
 
+## Deploy (GitHub Pages)
+
+Published at <https://muzhda-ahmadi7.github.io/eLearna-website/> by
+`.github/workflows/deploy-pages.yml` on every push to `main`.
+
+One-time setup: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+Pages-specific details:
+
+- Production builds use `base: '/eLearna-website/'` (`vite.config.js`); the dev server keeps `/`.
+- Public asset URLs go through `src/utils/asset.js` so they resolve under the repository path.
+- `npm run build` also writes `dist/404.html`; GitHub Pages serves it for deep links such as
+  `/eLearna-website/course/<slug>`, where the SPA router takes over.
+
 ## Pages
 
 | Route | Reference page | Notes |

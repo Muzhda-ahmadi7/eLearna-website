@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 // License page data extracted from the reference template.
 // All imagery is licensed via Freepik (see https://www.freepikcompany.com/legal).
 
@@ -179,14 +180,14 @@ export const imageLinks = [
 export const imagePreviews = [
   {
     href: 'https://www.freepik.com/free-photo/student-online-cute-girl-glasses-sweater-studying-computer-reading-book_26220179.htm',
-    image: '/assets/img/license-woman-holding-tablet.webp',
+    image: asset('/assets/img/license-woman-holding-tablet.webp'),
   },
   {
     href: 'https://www.freepik.com/free-photo/man-sitting-living-room-home-guy-enjoying-studying-using-laptop-headset_17047684.htm',
-    image: '/assets/img/about-two-employee-image.webp',
+    image: asset('/assets/img/about-two-employee-image.webp'),
   },
   {
     href: 'https://img.freepik.com/free-photo/confident-young-woman-with-brown-hair-looking-camera-indoors-generated-by-artificial-intelligence_25030-67362.jpg',
-    image: '/assets/img/license-woman-portrait.avif',
+    image: asset('/assets/img/license-woman-portrait.avif'),
   },
 ];

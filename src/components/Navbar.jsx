@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import {
@@ -12,8 +13,8 @@ import {
 import { contactInfo } from '../data/site'
 import './Navbar.css'
 
-const LOGO = '/assets/img/elearna.svg'
-const CART_ICON = '/assets/img/cart.svg'
+const LOGO = asset('/assets/img/elearna.svg')
+const CART_ICON = asset('/assets/img/cart.svg')
 const HOME_ONE_PATHS = new Set(['/', '/home-one'])
 const TRANSPARENT_NAV_PATHS = new Set(['/', '/home-one', '/contact-three'])
 

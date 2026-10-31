@@ -1,8 +1,9 @@
+import asset from '../utils/asset'
 import { Link } from 'react-router-dom'
 import './CourseCardTwo.css'
 
-const RATING = '/assets/img/rating.svg'
-const TICK = '/assets/img/tick.svg'
+const RATING = asset('/assets/img/rating.svg')
+const TICK = asset('/assets/img/tick.svg')
 
 // `.course-cards-two` - popular course card with hover pop-up (home three).
 export default function CourseCardTwo({ course }) {

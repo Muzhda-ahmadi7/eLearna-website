@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { plans } from '../data/plans'
@@ -5,7 +6,7 @@ import FaqBlock from '../components/FaqBlock'
 import JourneyCta from '../components/JourneyCta'
 import './PricingThree.css'
 
-const CHECK = '/assets/img/pricing-check.svg'
+const CHECK = asset('/assets/img/pricing-check.svg')
 
 const pricingThreeFaq = [
   { q: 'How do I enroll in an online course?', a: 'Lorem ipsum dolor sit amet consectetur. Amet ornare sit leo tristique sollicitudin ipsum diam fames. A vel iaculis vitae adipiscing sit sed ultricies.' },
@@ -107,7 +108,7 @@ export default function PricingThree() {
       {/* contact-two-faq */}
       <section className="contact-two-faq">
         <FaqBlock
-          icon="/assets/img/faq-icons.svg"
+          icon={asset("/assets/img/faq-icons.svg")}
           eyebrow="Contact Us"
           title="Frequently asked questions"
           items={pricingThreeFaq}

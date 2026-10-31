@@ -1,9 +1,10 @@
+import asset from '../utils/asset'
 import { Link } from 'react-router-dom'
 import './CourseCardOne.css'
 
-const RATING = '/assets/img/rating.svg'
-const BOOKS = '/assets/img/books-icon-dark.svg'
-const PEOPLE = '/assets/img/person-icon-dark.svg'
+const RATING = asset('/assets/img/rating.svg')
+const BOOKS = asset('/assets/img/books-icon-dark.svg')
+const PEOPLE = asset('/assets/img/person-icon-dark.svg')
 
 // `.courser-card-one` - top-course card with info row that swaps to actions on
 // hover/focus (Home One).

@@ -1,9 +1,10 @@
+import asset from '../utils/asset'
 import { Link } from 'react-router-dom';
 import { clientLogos } from '../data/site';
 import { posts } from '../data/posts';
 import './About.css';
 
-const IMG = '/assets/img';
+const IMG = asset('/assets/img');
 
 const philosophyCards = [
   { name: 'Web design', image: `${IMG}/category-cards-image.webp`, href: '/course-three' },

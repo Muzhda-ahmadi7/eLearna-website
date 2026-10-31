@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 import { Link, useParams } from 'react-router-dom';
 import { getMember } from '../data/team';
 import { courses } from '../data/courses';
@@ -6,10 +7,10 @@ import NotFound from './NotFound';
 import './InstructorDetails.css';
 
 const socials = [
-  { name: 'Behance', icon: '/assets/img/behance.png', href: 'https://www.behance.net' },
-  { name: 'Twitter', icon: '/assets/img/twitter.svg', href: 'https://x.com' },
-  { name: 'LinkedIn', icon: '/assets/img/linkedin.svg', href: 'https://in.linkedin.com' },
-  { name: 'Facebook', icon: '/assets/img/facebook.png', href: 'https://www.facebook.com' },
+  { name: 'Behance', icon: asset('/assets/img/behance.png'), href: 'https://www.behance.net' },
+  { name: 'Twitter', icon: asset('/assets/img/twitter.svg'), href: 'https://x.com' },
+  { name: 'LinkedIn', icon: asset('/assets/img/linkedin.svg'), href: 'https://in.linkedin.com' },
+  { name: 'Facebook', icon: asset('/assets/img/facebook.png'), href: 'https://www.facebook.com' },
 ];
 
 const skills = [
@@ -28,9 +29,9 @@ const skills = [
 ];
 
 const awards = [
-  { year: '2012', name: 'Awwwards', icon: '/assets/img/awwwards.svg' },
-  { year: '2016', name: 'Dribbble', icon: '/assets/img/dribbble.svg' },
-  { year: '2019', name: 'hubSpot', icon: '/assets/img/hubspot.svg' },
+  { year: '2012', name: 'Awwwards', icon: asset('/assets/img/awwwards.svg') },
+  { year: '2016', name: 'Dribbble', icon: asset('/assets/img/dribbble.svg') },
+  { year: '2019', name: 'hubSpot', icon: asset('/assets/img/hubspot.svg') },
 ];
 
 const marqueeItems = ['UI/UX Design', 'Branding', 'Web developent'];
@@ -44,7 +45,7 @@ function CoursePortraitCard({ course }) {
         <div className="small-shot-heading text-light-white">{course.category}</div>
         <div className="heading-four text-white course-name-three-gap">{course.title}</div>
         <div className="course-three-rating">
-          <img src="/assets/img/rating.svg" alt="rating star" />
+          <img src={asset("/assets/img/rating.svg")} alt="rating star" />
           <div className="small-shot-heading small-heading-body-color">
             {course.rating} ({course.reviews})
           </div>
@@ -117,7 +118,7 @@ export default function InstructorDetails() {
               {marqueeItems.map((item) => (
                 <div className="team-details-marquee-group" key={item}>
                   <div className="team-details-marquee-text">{item}</div>
-                  <img src="/assets/img/subtract-2.svg" alt="" />
+                  <img src={asset("/assets/img/subtract-2.svg")} alt="" />
                 </div>
               ))}
             </div>

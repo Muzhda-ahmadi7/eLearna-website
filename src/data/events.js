@@ -1,4 +1,5 @@
-const IMG = '/assets/img'
+import asset from '../utils/asset'
+const IMG = asset('/assets/img')
 
 const text =
   'Lorem ipsum dolor sit amet consectetur. Congue sit pellentesque eu scelerisque urna a porttitor. Massa nec ipsam sint.'

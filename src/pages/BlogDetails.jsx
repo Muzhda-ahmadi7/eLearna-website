@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 import { Link, useParams } from 'react-router-dom';
 import { posts, getPost, postBody } from '../data/posts';
 import JourneyCta from '../components/JourneyCta';
@@ -56,7 +57,7 @@ export default function BlogDetails() {
 
           <div className="blog-author">
             <div className="blog-author-main">
-              <img src="/assets/img/blog-author-image.jpg" alt={post.author} loading="lazy" />
+              <img src={asset("/assets/img/blog-author-image.jpg")} alt={post.author} loading="lazy" />
               <div className="blog-author-information">
                 <div className="small-heading">Author</div>
                 <h3 className="heading-three heading-three-gap text-white">{post.author}</h3>

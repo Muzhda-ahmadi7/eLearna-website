@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 // Navigation structure for the recreated site.
 
 import { courses } from './courses'
@@ -37,9 +38,9 @@ export const freeCourses = groupByCategory(courses.filter((c) => c.price === nul
 export const paidCourses = groupByCategory(courses.filter((c) => c.price !== null))
 
 export const megaPromo = {
-  icon: '/assets/img/coins-icons.svg',
+  icon: asset('/assets/img/coins-icons.svg'),
   title: 'Increase your potential earnings',
   text: 'Lorem ipsum dolor sit amet scelerisque integer adipiscing velit sem sed.',
-  arrow: '/assets/img/button-arrow-black.png',
+  arrow: asset('/assets/img/button-arrow-black.png'),
   href: '/career',
 }

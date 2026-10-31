@@ -1,8 +1,9 @@
+import asset from '../utils/asset'
 import { Link } from 'react-router-dom'
 import JourneyCta from '../components/JourneyCta'
 import './Career.css'
 
-const CHECK = '/assets/img/black-check.svg'
+const CHECK = asset('/assets/img/black-check.svg')
 
 const points = [
   {
@@ -50,14 +51,14 @@ export default function Career() {
             <div className="connetivity-left">
               <div className="career-left-image reveal">
                 <img
-                  src="/assets/img/career-page-image.webp"
+                  src={asset("/assets/img/career-page-image.webp")}
                   alt="Instructor at work"
                   className="border-radius-four tab-image"
                 />
               </div>
               <div className="career-right-image reveal">
                 <img
-                  src="/assets/img/career-page-image-2.webp"
+                  src={asset("/assets/img/career-page-image-2.webp")}
                   alt="Teaching online"
                   className="border-radius-four tab-image"
                 />

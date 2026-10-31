@@ -1,8 +1,9 @@
+import asset from '../utils/asset'
 import { Link } from 'react-router-dom'
 import { footerContent, contactInfo } from '../data/site'
 import './Footer.css'
 
-const LOGO = '/assets/img/elearna.svg'
+const LOGO = asset('/assets/img/elearna.svg')
 
 // `footer-two` (default) is the dark variant used across the recreated pages;
 // `footer-one` (events + license) swaps the background photo, adds a

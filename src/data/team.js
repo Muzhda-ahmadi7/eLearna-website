@@ -1,4 +1,5 @@
-const IMG = '/assets/img'
+import asset from '../utils/asset'
+const IMG = asset('/assets/img')
 
 const bio =
   'Lorem ipsum dolor sit amet consectetur. Neque libero donec hendrerit nam id congue sit pellentesque eu scelerisque urna a porttitor.'

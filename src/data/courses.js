@@ -1,7 +1,8 @@
+import asset from '../utils/asset'
 // Courses collected from the reference site (11 linked courses).
 // Prices/ratings/lesson counts mirror the reference content.
 
-const IMG = '/assets/img'
+const IMG = asset('/assets/img')
 
 export const courses = [
   {
@@ -265,7 +266,7 @@ export const courseDetail = {
   instructor: {
     name: 'Lee Schmitt',
     role: 'instructor',
-    image: '/assets/img/team-member.webp',
+    image: asset('/assets/img/team-member.webp'),
     text: 'Lorem ipsum dolor sit amet consectetur. Neque libero donec hendrerit nam id congue sit pellentesque eu scelerisque urna.',
   },
 }

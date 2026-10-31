@@ -1,3 +1,4 @@
+import asset from '../utils/asset'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { contactInfo } from '../data/site'
@@ -44,7 +45,7 @@ export default function ContactThree() {
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
       >
-        <img src="/assets/img/icons.svg" alt="" />
+        <img src={asset("/assets/img/icons.svg")} alt="" />
       </button>
 
       <div className="contact-three-form">

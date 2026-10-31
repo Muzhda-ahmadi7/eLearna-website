@@ -8,9 +8,11 @@ import './index.css'
 // Scroll-reveal styles only hide content when JS is available.
 document.documentElement.classList.add('js')
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>,

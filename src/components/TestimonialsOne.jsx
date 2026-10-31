@@ -1,12 +1,13 @@
+import asset from '../utils/asset'
 import { useEffect, useRef, useState } from 'react'
 import { testimonials } from '../data/testimonials'
 import { homeOneCounters } from '../data/site'
 import './TestimonialsOne.css'
 
-const ARROW = '/assets/img/slider-arrow.svg'
+const ARROW = asset('/assets/img/slider-arrow.svg')
 const AUTHOR_IMAGES = [
-  '/assets/img/testimonial-author-1.avif',
-  '/assets/img/testimonial-author-2.avif',
+  asset('/assets/img/testimonial-author-1.avif'),
+  asset('/assets/img/testimonial-author-2.avif'),
 ]
 
 function StatCounter({ value, suffix, label }) {
