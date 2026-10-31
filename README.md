@@ -34,6 +34,14 @@ Pages-specific details:
 - `npm run build` also writes `dist/404.html`; GitHub Pages serves it for deep links such as
   `/eLearna-website/course/<slug>`, where the SPA router takes over.
 
+### Troubleshooting: deployed page is blank
+
+A blank page means Pages is serving the repository files instead of the build. Check the served
+HTML: if it contains `<script type="module" src="/src/main.jsx">`, the source is still
+**Deploy from a branch** (Pages runs "Build with Jekyll" and publishes the dev entry point,
+which the browser cannot execute). Switch the source to **GitHub Actions** and re-run the
+"Deploy to GitHub Pages" workflow.
+
 ## Pages
 
 | Route | Reference page | Notes |
