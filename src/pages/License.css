@@ -1,0 +1,111 @@
+/* ============================================================
+   License page
+   ============================================================ */
+
+.checkout-hero-section {
+  background-color: var(--color--heading-color);
+  background-image: url('/assets/img/course-one-hero-backgorund.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 159px 0 120px;
+}
+
+.get-in-touch-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.license-descripition {
+  max-width: 850px;
+}
+
+/* ---------------- licensing ---------------- */
+
+.licensing-section {
+  padding: 80px 0 90px;
+}
+
+.licensing-boxes {
+  margin-bottom: 55px;
+}
+
+.images-links-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.images-link {
+  text-decoration: underline;
+}
+
+.images-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.images-wrapper {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.licensing-image,
+.images-wrapper img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.licensing-border {
+  height: 1px;
+  background-color: #0f252a1a;
+  margin: 40px 0 30px;
+}
+
+.licensing-section-gap {
+  margin-top: 0;
+}
+
+/* ---------------- responsive ---------------- */
+
+@media (max-width: 991px) {
+  .checkout-hero-section {
+    padding: 140px 0 90px;
+  }
+
+  .licensing-section {
+    padding: 20px 0 40px;
+  }
+
+  .licensing-image,
+  .images-wrapper img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .images-preview {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .licensing-image,
+  .images-wrapper img {
+    height: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .licensing-image,
+  .images-wrapper img {
+    height: 250px;
+  }
+}

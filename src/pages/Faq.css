@@ -1,0 +1,151 @@
+/* ================================ faq-hero =============================== */
+
+.faq-hero {
+  background-image: linear-gradient(#000000b3, #000000b3), url('/assets/img/faq-hero.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-color: var(--color--heading-color);
+  padding: 285px 15px 260px;
+}
+
+.faq-hero-main {
+  display: flex;
+  flex-flow: column;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  gap: 20px;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* =============================== faq-section ============================= */
+
+.faq-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.faq-tab {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.faq-tab-menu {
+  flex-flow: column;
+  flex: 1;
+  max-width: 410px;
+  margin-right: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.tab-link {
+  display: flex;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  gap: 10px;
+  background-color: var(--color--light-blue);
+  background-image: url('/assets/img/vector-2.svg');
+  background-position: 93%;
+  background-repeat: no-repeat;
+  background-size: 13px;
+  font-family: var(--font-family--heading);
+  color: var(--color--grey-blue);
+  font-size: var(--font-size-desktop--h5);
+  letter-spacing: -0.5px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 30px;
+  font-weight: 600;
+  line-height: 32px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.tab-link.w--current {
+  background-color: var(--color--deep-green);
+  color: var(--color--white);
+  background-image: url('/assets/img/button-arrow-white-1.png');
+  background-position: 93%;
+  background-repeat: no-repeat;
+  background-size: 13px;
+}
+
+.faq-tab-content {
+  flex: 1;
+  max-width: 770px;
+  margin-left: 60px;
+}
+
+.faq-box-main {
+  margin-bottom: 15px;
+}
+
+/* ============================== breakpoints =============================== */
+
+@media screen and (min-width: 1444px) {
+  .faq-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .faq-hero {
+    padding-top: 160px;
+    padding-bottom: 140px;
+  }
+
+  .faq-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .faq-tab {
+    flex-flow: column;
+    align-items: stretch;
+  }
+
+  .faq-tab-menu {
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .faq-tab-content {
+    max-width: none;
+    margin-top: 33px;
+    margin-left: 0;
+  }
+
+  .tab-link {
+    font-size: var(--font-size-mobile--h4-m);
+    background-position: 96%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    line-height: 27px;
+  }
+
+  .tab-link.w--current {
+    background-position: 96%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tab-link {
+    font-size: var(--font-size-mobile--h5-m);
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .tab-link {
+    padding-right: 40px;
+  }
+}

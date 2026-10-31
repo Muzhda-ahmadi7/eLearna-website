@@ -1,0 +1,91 @@
+/* "Why we are" - `.home-three-journey` (light blue band, pulled down under the
+   overlapping CTA panel which has margin-bottom: -100px). */
+
+.home-three-journey {
+  background-color: var(--color--light-blue);
+  padding-top: 175px;
+  padding-bottom: 80px;
+}
+
+.home-one-journey {
+  padding-bottom: 80px;
+}
+
+.home-one-journey-main-wrap {
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.no-margin-bottom.journey-description {
+  max-width: 574px;
+  margin-bottom: 40px;
+}
+
+.journey-options-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+.journey-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  text-align: center;
+}
+
+.home-three-journey .journey-cards {
+  background-color: var(--color--white);
+  border-radius: 4px;
+  padding: 25px 20px 28px;
+}
+
+.journey-cards img {
+  height: 42px;
+  width: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .home-one-journey {
+    padding-bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .home-three-journey {
+    padding-top: 210px;
+    padding-bottom: 110px;
+  }
+  .home-one-journey {
+    padding-bottom: 50px;
+  }
+  .journey-options-wrap {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-three-journey {
+    padding-top: 155px;
+    padding-bottom: 50px;
+  }
+  .no-margin-bottom.journey-description {
+    margin-bottom: 20px;
+  }
+  .journey-options-wrap {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .journey-cards {
+    gap: 18px;
+  }
+}

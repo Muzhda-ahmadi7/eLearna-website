@@ -1,0 +1,207 @@
+/* =============================== events-hero ============================= */
+
+.events-hero {
+  background-image: linear-gradient(#000000b3, #000000b3), url('/assets/img/events-banner.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-color: var(--color--heading-color);
+  padding-top: 220px;
+  padding-bottom: 200px;
+}
+
+/* =============================== events-main ============================= */
+
+.events-main {
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+
+.events-main-box {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.events-main-description {
+  max-width: 725px;
+  margin-bottom: 60px;
+}
+
+.collection-list-wrapper {
+  width: 100%;
+}
+
+.events-wrapper {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  width: 100%;
+}
+
+.events-card-two {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  text-decoration: none;
+  display: block;
+}
+
+.event-image {
+  aspect-ratio: 410 / 470;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.events-card-two:hover .event-image {
+  transform: scale(1.04);
+}
+
+.events-date-wrapper {
+  display: flex;
+  grid-column-gap: 7px;
+  grid-row-gap: 7px;
+  gap: 7px;
+  background-color: var(--color--white);
+  border-bottom-left-radius: 4px;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 108px;
+  padding: 7px 17px;
+  position: absolute;
+  inset: 0% 0% auto auto;
+  z-index: 3;
+}
+
+.event-date-more {
+  display: flex;
+  flex-direction: column;
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  gap: 4px;
+}
+
+.marquee-text-box {
+  position: absolute;
+  inset: auto 0% 0%;
+  z-index: 2;
+}
+
+.event-marquee {
+  background-color: var(--color--brand);
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  display: flex;
+}
+
+.event-marquee.events-marquee-two {
+  position: static;
+  overflow: hidden;
+}
+
+.event-marquee .marquee-track {
+  display: flex;
+  width: max-content;
+  animation: events-detail-marquee 14s linear infinite;
+}
+
+.marquee-train {
+  display: flex;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  gap: 15px;
+  flex: none;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.event-marquee-item {
+  display: flex;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  gap: 15px;
+  align-items: center;
+}
+
+@keyframes events-detail-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.events-text {
+  display: flex;
+  flex-flow: column;
+  background-color: var(--color--white);
+  justify-content: flex-start;
+  align-items: center;
+  padding: 25px 20px;
+}
+
+.events-cards-tag {
+  display: flex;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.small-dot.color-grey {
+  background-color: var(--color--paragraph-color);
+}
+
+/* ============================== breakpoints =============================== */
+
+@media screen and (min-width: 1444px) {
+  .events-main {
+    padding-top: 110px;
+    padding-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .events-hero {
+    padding-top: 157px;
+    padding-bottom: 115px;
+  }
+
+  .events-main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .events-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .events-hero {
+    padding-top: 145px;
+  }
+
+  .events-main-description {
+    margin-bottom: 25px;
+  }
+
+  .events-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

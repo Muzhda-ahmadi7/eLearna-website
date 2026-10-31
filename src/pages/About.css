@@ -1,0 +1,684 @@
+/* ============================================================
+   About page (recreation of About Two - no third variant exists)
+   ============================================================ */
+
+.about-two-hero {
+  background-image: linear-gradient(rgba(8, 16, 18, 0.7), rgba(8, 16, 18, 0.7)),
+    url('/assets/img/about-two-hero.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  padding: 210px 0;
+}
+
+.about-two-hero-main {
+  max-width: 570px;
+}
+
+.about-two-hero .small-heading {
+  color: var(--color--white);
+}
+
+/* ---------------- our story ---------------- */
+
+.about-two-section {
+  padding: 90px 0 80px;
+}
+
+.about-two-main {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-two-image-wrapper {
+  flex: 1;
+  max-width: 622px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.about-two-image-top-box {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-two-image-top-box img {
+  width: 100%;
+}
+
+.about-two-image-shadow {
+  box-shadow: 0 30px 60px rgba(27, 39, 41, 0.15);
+}
+
+.about-two-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5px;
+  flex: none;
+}
+
+.text-vertical {
+  writing-mode: vertical-lr;
+}
+
+.small-text.text-vertical {
+  color: var(--color--heading-color);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.text-vertical.heading-big-text {
+  color: var(--color--heading-color);
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 104px;
+}
+
+.about-two-women-image {
+  position: relative;
+  z-index: 3;
+  margin-top: -112px;
+  padding-left: 40px;
+}
+
+.about-two-women-image img {
+  width: 100%;
+}
+
+.about-two-main-text {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* ---------------- philosophy ---------------- */
+
+.about-philosophy {
+  padding-bottom: 20px;
+}
+
+.about-philosophy-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-three-gap-top {
+  margin-top: 13px;
+  margin-bottom: 0;
+}
+
+.about-two-course-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.category-four-cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 368px;
+}
+
+.category-four-cards-background {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #b6b7ba;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 368px;
+  padding: 70px 10px 70px 0;
+  box-shadow: 0 40px 60px rgba(27, 39, 41, 0.3);
+  transition: opacity 0.4s ease;
+}
+
+.category-four-cards-background .heading-five {
+  writing-mode: vertical-rl;
+}
+
+.category-cards-image-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.category-four-image {
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform-origin: 0%;
+}
+
+.category-four-cards .arrow {
+  position: absolute;
+  right: 20px;
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 100%;
+  background-color: var(--color--light-blue);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.category-four-cards:hover .category-four-image {
+  transform: translateX(60%);
+  opacity: 0;
+}
+
+.category-four-cards:hover .category-four-cards-background,
+.category-four-cards:hover .arrow {
+  opacity: 1;
+}
+
+/* ---------------- quote text ---------------- */
+
+.about-two-quote-text {
+  padding: 80px 15px;
+}
+
+.quote-text-container {
+  max-width: 644px;
+  margin: 0 auto;
+}
+
+.quote-text-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------------- discover cards ---------------- */
+
+.tab-gutter {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.home-two-discover-options {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-two-discover-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.discover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-two-discover-cards-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-image: linear-gradient(rgba(6, 15, 17, 0) 33%, #060f11);
+}
+
+.discover-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 50px 20px 40px;
+  background-repeat: repeat, no-repeat;
+  background-position: 0 0, 50%;
+  background-size: auto, cover;
+}
+
+.discover-cards.border-off {
+  border-right: none;
+}
+
+.discover-cards-text {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.discover-cards-description {
+  overflow: hidden;
+}
+
+/* ---------------- clients ---------------- */
+
+.about-clients {
+  background-color: var(--color--light-blue);
+  padding: 68px 0 65px;
+  overflow: hidden;
+}
+
+.clients-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.clients-top {
+  max-width: 500px;
+}
+
+.clients-overlay-one {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    90deg,
+    var(--color--light-blue),
+    rgba(247, 251, 252, 0) 25%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(245, 250, 251, 0) 75%,
+    var(--color--light-blue)
+  );
+}
+
+/* ---------------- our vision ---------------- */
+
+.about-two-vision {
+  padding: 90px 0;
+}
+
+.about-two-vision-main {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-two-vision-left {
+  flex: 1;
+  max-width: 660px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.vision-images-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.vision-images-wrapper img {
+  width: 100%;
+}
+
+.vision-counter-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--color--brand);
+  border-radius: 4px;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.vision-counter-boxes .small-heading {
+  width: 100%;
+}
+
+.vision-box-dark {
+  background-color: var(--color--heading-color);
+}
+
+.vision-counter-percent {
+  align-self: flex-end;
+  padding-bottom: 8px;
+}
+
+.about-two-vision-right {
+  flex: 1;
+  max-width: 521px;
+}
+
+.vision-heading {
+  max-width: 496px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.vision-description {
+  margin-bottom: 30px;
+}
+
+/* ---------------- became an instructor ---------------- */
+
+.about-two-instructor-section {
+  padding-top: 87px;
+  overflow: hidden;
+}
+
+.about-two-instructor {
+  background-color: var(--color--heading-color);
+  background-image: url('/assets/img/backgorund-noise-two.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.about-two-instrutor-main {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1110px;
+}
+
+.about-two-instructor-text {
+  flex: 1;
+  max-width: 520px;
+  padding: 30px 0;
+}
+
+.about-two-instrutor-image {
+  flex: 1;
+  max-width: 461px;
+  margin-top: -87px;
+  padding-left: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.about-two-instrutor-image img {
+  width: 100%;
+}
+
+.instructor-image-mobile {
+  display: none;
+}
+
+.instructor-review {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: auto;
+  max-width: 60%;
+  border-radius: 100px;
+  box-shadow: 0 14px 46px rgba(0, 0, 0, 0.17);
+}
+
+/* ---------------- blogs ---------------- */
+
+.about-two-blogs {
+  padding: 80px 0 90px;
+}
+
+/* ---------------- responsive ---------------- */
+
+@media (min-width: 1440px) {
+  .about-two-section {
+    padding: 120px 0 110px;
+  }
+
+  .about-two-quote-text {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  .about-two-blogs {
+    padding: 110px 0 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-two-hero {
+    padding: 140px 0;
+  }
+
+  .about-two-section {
+    padding: 50px 0;
+  }
+
+  .about-two-main {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .about-two-image-wrapper {
+    max-width: none;
+  }
+
+  .about-two-women-image {
+    padding-left: 20%;
+  }
+
+  .about-two-main-text {
+    max-width: none;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-two-course-categories {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 30px;
+    padding-top: 40px;
+  }
+
+  .about-philosophy-main {
+    text-align: center;
+    align-items: center;
+  }
+
+  .home-two-discover-images {
+    display: none;
+  }
+
+  .home-two-discover-cards-wrap {
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    background-image: none;
+  }
+
+  .discover-cards {
+    background-image: linear-gradient(rgba(6, 15, 17, 0) 17%, #060f11),
+      url('/assets/img/potential-image-2.webp');
+    border-right: none;
+    padding: 100px 15px 40px;
+  }
+
+  .discover-cards.border-off {
+    background-image: linear-gradient(rgba(6, 15, 17, 0) 17%, #060f11),
+      url('/assets/img/potential-image.webp');
+  }
+
+  .discover-cards.card-three {
+    background-image: linear-gradient(rgba(6, 15, 17, 0) 17%, #060f11),
+      url('/assets/img/potential-image-3.webp');
+  }
+
+  .discover-cards.card-four {
+    background-image: linear-gradient(rgba(6, 15, 17, 0) 17%, #060f11),
+      url('/assets/img/contact-us-one.webp');
+  }
+
+  .about-two-vision {
+    padding: 60px 0 50px;
+  }
+
+  .about-two-vision-main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-two-vision-left {
+    max-width: none;
+  }
+
+  .about-two-vision-right {
+    max-width: none;
+    text-align: center;
+    align-items: center;
+  }
+
+  .vision-heading {
+    max-width: none;
+  }
+
+  .vision-description {
+    margin-bottom: 20px;
+  }
+
+  .about-two-instructor {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .about-two-instrutor-main {
+    flex-direction: column;
+  }
+
+  .about-two-instructor-text {
+    max-width: none;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-two-instrutor-image {
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .about-two-instructor-section {
+    padding-top: 0;
+  }
+
+  .about-two-blogs {
+    padding: 50px 0 60px;
+  }
+
+  .about-clients {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-two-hero {
+    padding: 120px 0;
+  }
+
+  .about-two-main {
+    gap: 40px;
+  }
+
+  .about-two-women-image {
+    margin-top: -35px;
+  }
+
+  .about-two-course-categories {
+    gap: 50px 30px;
+    padding-top: 50px;
+  }
+
+  .about-two-vision-left,
+  .vision-images-wrapper {
+    gap: 20px;
+  }
+
+  .vision-counter-boxes {
+    padding: 20px;
+  }
+
+  .vision-heading,
+  .vision-description {
+    margin-bottom: 15px;
+  }
+
+  .instructor-image-desktop {
+    display: none;
+  }
+
+  .instructor-image-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 479px) {
+  .about-two-hero {
+    padding: 120px 0;
+  }
+
+  .about-two-course-categories {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+  }
+
+  .about-two-image-top-box {
+    flex-direction: column-reverse;
+  }
+
+  .about-two-text {
+    display: none;
+  }
+
+  .home-two-discover-cards-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .about-two-vision-left {
+    flex-direction: column;
+  }
+
+  .vision-counter-boxes {
+    width: 100%;
+  }
+
+  .about-two-instructor {
+    padding: 30px 20px 40px;
+  }
+
+  .instructor-review {
+    width: 43%;
+    margin-top: 0;
+    bottom: 0;
+  }
+}

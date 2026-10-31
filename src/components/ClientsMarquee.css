@@ -1,0 +1,114 @@
+/* Clients marquee - `.clients-three` dark band (Home Three),
+   `.clients` light band (Home One), infinite logo scroll */
+
+.clients {
+  background-color: var(--color--light-blue);
+  padding-top: 68px;
+  padding-bottom: 65px;
+  overflow: hidden;
+}
+
+.clients-main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.clients-caption {
+  color: #7b7c7d;
+}
+
+.clients-top {
+  margin-bottom: 25px;
+}
+
+.clients-overlay-one {
+  background-image: linear-gradient(
+    90deg,
+    var(--color--light-blue),
+    #f7fbfc00 25%,
+    #fff0 50%,
+    #f5fafb00 75%,
+    var(--color--light-blue)
+  );
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.clients-three {
+  background-color: var(--color--heading-color);
+  padding-top: 40px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.marquee-main {
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: elerna-marquee 30s linear infinite;
+}
+
+.clients-train {
+  display: flex;
+  gap: 91px;
+  flex: none;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 91px;
+}
+
+.clients-logo {
+  width: auto;
+  height: 51px;
+  flex: none;
+  margin: 1.5px 0;
+}
+
+@keyframes elerna-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.3333%);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .clients {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .clients-logo {
+    height: 50px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clients-train {
+    gap: 50px;
+    padding-right: 50px;
+  }
+  .clients-logo {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .clients-top {
+    max-width: 290px;
+    line-height: 20px;
+  }
+}

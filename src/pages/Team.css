@@ -1,0 +1,140 @@
+/* ================================ team-hero ============================== */
+
+.team-hero {
+  background-image: linear-gradient(#000000b3, #000000b3), url('/assets/img/team-hero-image.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-color: var(--color--heading-color);
+  padding-top: 300px;
+  padding-bottom: 200px;
+}
+
+.team-hero-main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* =============================== team-section ============================ */
+
+.team-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.team-main {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.heading-two-gap-updown.team-heading {
+  max-width: 750px;
+}
+
+.team-wrapper {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+}
+
+.team-card {
+  display: flex;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  gap: 15px;
+  flex-flow: column;
+  width: 100%;
+  text-decoration: none;
+}
+
+.team-card-image {
+  aspect-ratio: 300 / 401;
+  background-image: linear-gradient(#e2e8ea, #f8f7ef);
+  border-radius: 4px;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  width: 100%;
+  height: auto;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  overflow: hidden;
+}
+
+.team-member-image {
+  aspect-ratio: 300 / 410;
+  object-fit: cover;
+  object-position: 50% 0%;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.team-card:hover .team-member-image {
+  transform: scale(1.06);
+}
+
+.team-member-names {
+  display: flex;
+  flex-flow: column;
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  gap: 6px;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* ============================== breakpoints =============================== */
+
+@media screen and (min-width: 1444px) {
+  .team-section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .team-hero {
+    padding-top: 183px;
+    padding-bottom: 140px;
+  }
+
+  .team-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .team-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team-hero {
+    padding-top: 136px;
+    padding-bottom: 100px;
+  }
+
+  .team-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .team-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

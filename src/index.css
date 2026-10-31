@@ -1,0 +1,551 @@
+/* ==========================================================================
+   Elearna - global design system
+   Tokens mirror the reference site's published stylesheet:
+   body  = Outfit 17px / #7b7c7d, headings = Space Grotesk / #0f252a
+   ========================================================================== */
+
+:root {
+  --font-family--body: 'Outfit', sans-serif;
+  --font-family--heading: 'Space Grotesk', sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.35s;
+  --duration-slow: 0.7s;
+
+  --color--heading-color: #0f252a;
+  --color--paragraph-color: #7b7c7d;
+  --color--brand: #ffb606;
+  --color--blue: #254edb;
+  --color--light-blue: #eff6f8;
+  --color--light-gray: #f1f4f4;
+  --color--light-yellow: #f1f1e9;
+  --color--grey-blue: #6f8197;
+  --color--deep-green: #20383e;
+  --color--deep-blue: #1c375b;
+  --color--white: #fff;
+  --color--black: #000;
+
+  --font-size-desktop--body: 17px;
+  --font-size-mobile--body-m: 14px;
+  --font-size-desktop--h1: 60px;
+  --font-size-tab--h1-t: 45px;
+  --font-size-mobile--h1-m: 35px;
+  --font-size-desktop--h2: 48px;
+  --font-size-tab--h2-t: 35px;
+  --font-size-mobile--h2-m: 30px;
+  --font-size-desktop--h3: 35px;
+  --font-size-tab--h3-t: 30px;
+  --font-size-mobile--h3-m: 25px;
+  --font-size-desktop--h4: 24px;
+  --font-size-mobile--h4-m: 20px;
+  --font-size-desktop--h5: 20px;
+  --font-size-mobile--h5-m: 17px;
+  --font-size-desktop--h6: 18px;
+  --font-size-mobile--h6-m: 15px;
+  --font-size-desktop--small-heading: 15px;
+  --font-size-mobile--small-heading-m: 12px;
+  --font-size-desktop--button-font: 17px;
+  --font-size-mobile--button-m: 14px;
+  --font-size-desktop--menu-font: 16px;
+  --font-size-desktop--testimonial: 22px;
+}
+
+/* ------------------------------- reset ---------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family--body);
+  font-size: var(--font-size-desktop--body);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 29px;
+  color: var(--color--paragraph-color);
+  background-color: var(--color--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family--heading);
+  color: var(--color--heading-color);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--font-size-desktop--h1);
+  line-height: var(--font-size-desktop--h1);
+  letter-spacing: -2.3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: var(--font-size-desktop--h2);
+  letter-spacing: -1.5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 52px;
+}
+
+h3 {
+  font-size: var(--font-size-desktop--h3);
+  letter-spacing: -1px;
+  line-height: 42px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: var(--font-size-desktop--h4);
+  letter-spacing: -0.5px;
+  line-height: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: var(--font-size-desktop--h5);
+  letter-spacing: -0.5px;
+  line-height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font-size: var(--font-size-desktop--h6);
+  letter-spacing: -0.5px;
+  line-height: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* ----------------------------- typography ------------------------------- */
+.heading-one {
+  font-family: var(--font-family--heading);
+  color: var(--color--heading-color);
+  font-size: var(--font-size-desktop--h1);
+  line-height: var(--font-size-desktop--h1);
+  letter-spacing: -2.3px;
+  font-weight: 600;
+}
+
+.heading-two {
+  font-family: var(--font-family--heading);
+  color: var(--color--heading-color);
+  font-size: var(--font-size-desktop--h2);
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  font-weight: 600;
+}
+
+.heading-three {
+  font-family: var(--font-family--heading);
+  color: var(--color--heading-color);
+  font-size: var(--font-size-desktop--h3);
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+.heading-four {
+  font-family: var(--font-family--heading);
+  color: var(--color--heading-color);
+  font-size: var(--font-size-desktop--h4);
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+.heading-five {
+  font-family: var(--font-family--heading);
+  color: var(--color--heading-color);
+  font-size: var(--font-size-desktop--h5);
+  line-height: 25px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+.heading-six {
+  font-family: var(--font-family--heading);
+  color: var(--color--heading-color);
+  font-size: var(--font-size-desktop--h6);
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+.small-heading {
+  color: var(--color--light-blue);
+  font-size: var(--font-size-desktop--small-heading);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.small-shot-heading {
+  color: var(--color--heading-color);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+/* ------------------------------ layout ---------------------------------- */
+/* Webflow's `.w-container` (940px) — declared before `.container` so that the
+   combined `.container.w-container` usage resolves to the wider 1320px. */
+.w-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+/* ------------------------------ buttons --------------------------------- */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 50px;
+  padding: 10px 45px;
+  background-color: var(--color--heading-color);
+  color: var(--color--white);
+  font-size: var(--font-size-desktop--button-font);
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+  border: 1px solid #fff3;
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color--brand);
+  outline-offset: 3px;
+}
+
+.button[aria-disabled='true'],
+.button:disabled {
+  opacity: 0.45;
+  pointer-events: none;
+  transform: none;
+}
+
+.button-yellow {
+  background-color: var(--color--brand);
+  color: var(--color--heading-color);
+  border-style: none;
+  font-weight: 400;
+}
+
+.button-yellow:hover {
+  background-color: var(--color--heading-color);
+  color: var(--color--white);
+}
+
+.button-white {
+  background-color: var(--color--white);
+  color: var(--color--heading-color);
+  border-style: none;
+}
+
+.button-border-off {
+  border-style: none;
+}
+
+.button-border-off:hover {
+  background-color: var(--color--brand);
+  color: var(--color--heading-color);
+}
+
+/* ----------------------------- utilities -------------------------------- */
+.text-white { color: var(--color--white); }
+.color-white { color: var(--color--white); }
+.overflow-hidden { overflow: hidden; }
+.text-dark { color: var(--color--heading-color); }
+.text-yellow { color: var(--color--brand); }
+.brand-color { color: var(--color--brand); }
+.text-blue { color: var(--color--blue); }
+.text-light-white { opacity: 0.7; color: var(--color--white); }
+.text-align-center { text-align: center; }
+.text-underline { text-decoration: underline; }
+.no-margin-bottom { margin-bottom: 0; }
+.no-margin { margin: 0; }
+.no-margin-top { margin-top: 0; }
+.heading-two-gap-top { margin-top: 15px; margin-bottom: 0; }
+.body-small-text { font-size: var(--font-size-desktop--small-heading); text-transform: uppercase; }
+.margin-bottom-thirty-five { margin-bottom: 35px; }
+.heading-two-gap-updown { margin-top: 15px; margin-bottom: 12px; }
+.small-dot {
+  background-color: var(--color--heading-color);
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  flex: none;
+}
+.small-dot.color-white { background-color: var(--color--white); }
+.margin-top-fifteen { margin-top: 15px; }
+.margin-top-twenty { margin-top: 20px; }
+.margin-bottom-ten { margin-bottom: 10px; }
+.margin-bottom-twenty { margin-bottom: 20px; }
+.margin-bottom-fifteen { margin-bottom: 15px; }
+.margin-bottom-twenty-five { margin-bottom: 25px; }
+.margin-bottom-thirty { margin-bottom: 30px; }
+.heading-three-gap { margin-top: 13px; margin-bottom: 10px; }
+.heading-one-top-gap { margin-top: 15px; }
+.small-heading-body-color { color: var(--color--paragraph-color); font-weight: 400; }
+
+.grey-dot {
+  background-color: var(--color--paragraph-color);
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  flex: none;
+}
+
+/* --------------------------- reveal animation --------------------------- */
+/* Content is only hidden when JavaScript is running, so a script failure can
+   never leave the page blank. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out-expo),
+    transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Route transition wrapper (keyed by pathname in MainLayout). */
+.page-main {
+  animation: page-enter 0.4s var(--ease-out-expo) both;
+}
+
+/* Contact uses fixed pop-ups, so it must not inherit a transformed ancestor. */
+.page-main-static {
+  animation: none;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ------------------------------ marquee --------------------------------- */
+@keyframes elerna-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.marquee-main {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* --------------------------- responsive type ---------------------------- */
+@media screen and (max-width: 991px) {
+  h1,
+  .heading-one {
+    font-size: var(--font-size-tab--h1-t);
+    line-height: 45px;
+  }
+  h2,
+  .heading-two {
+    font-size: var(--font-size-tab--h2-t);
+    line-height: 44px;
+  }
+  h3,
+  .heading-three {
+    font-size: var(--font-size-tab--h3-t);
+    line-height: 37px;
+  }
+  h4,
+  .heading-four {
+    font-size: var(--font-size-mobile--h4-m);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1,
+  .heading-one {
+    font-size: var(--font-size-mobile--h1-m);
+    line-height: 35px;
+    letter-spacing: -1.3px;
+  }
+  h2,
+  .heading-two {
+    font-size: var(--font-size-mobile--h2-m);
+    line-height: 40px;
+    letter-spacing: -1.3px;
+  }
+  h3,
+  .heading-three {
+    font-size: var(--font-size-mobile--h3-m);
+    line-height: 35px;
+    letter-spacing: -0.7px;
+  }
+  h4,
+  .heading-four {
+    font-size: var(--font-size-mobile--h4-m);
+    line-height: 30px;
+  }
+  h5,
+  .heading-five {
+    font-size: var(--font-size-mobile--h5-m);
+    line-height: 23px;
+  }
+  h6,
+  .heading-six {
+    font-size: var(--font-size-mobile--h6-m);
+    line-height: 20px;
+  }
+  .small-heading {
+    font-size: var(--font-size-mobile--small-heading-m);
+  }
+  .button {
+    font-size: var(--font-size-mobile--button-m);
+    padding: 10px 20px;
+    min-height: 50px;
+    line-height: 20px;
+  }
+  .heading-two-gap-updown {
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+  body {
+    font-size: var(--font-size-mobile--body-m);
+    line-height: 23px;
+  }
+}
+
+/* ------------------------ shared course grid ---------------------------- */
+/* `.tranding-courses-cards` is used by both Home Three and Course Three. */
+.tranding-courses-cards {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+}
+
+.card-height-full {
+  height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .tranding-courses-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .tranding-courses-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------- reduced motion ----------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .marquee-track {
+    animation: none !important;
+  }
+}

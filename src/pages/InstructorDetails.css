@@ -1,0 +1,553 @@
+/* ============================================================
+   Instructor (team member details) page
+   ============================================================ */
+
+.team-member-details-hero {
+  background-color: var(--color--heading-color);
+  background-image: radial-gradient(circle at 78%, rgba(255, 182, 6, 0.1), rgba(255, 182, 6, 0) 25%);
+  padding-top: 160px;
+}
+
+.team-details-hero-main {
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-details-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 632px;
+  position: relative;
+}
+
+.team-member-circle {
+  position: absolute;
+  top: 25%;
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 100%;
+  background-color: var(--color--brand);
+}
+
+.team-details-image {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+}
+
+.team-members-social {
+  position: absolute;
+  bottom: 200px;
+  right: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 4;
+}
+
+.team-social-link {
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+
+.team-social-link img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.team-social-link:hover {
+  transform: rotate(-90deg) scale(1.15);
+}
+
+.team-member-social-line {
+  width: 1px;
+  height: 75px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.team-details-hero-text {
+  flex: 1;
+  max-width: 526px;
+}
+
+.team-details-hero-text h1 {
+  margin-top: 0;
+}
+
+.team-specialties {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.team-specialties li {
+  margin-bottom: 8px;
+}
+
+/* ---------------- hero marquee ---------------- */
+
+.team-details-marquee {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-details-marquee-train {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding-right: 100px;
+  animation: elerna-marquee 30s linear infinite;
+}
+
+.team-details-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.team-details-marquee-text {
+  opacity: 0.1;
+  color: var(--color--white);
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 86px;
+  white-space: nowrap;
+}
+
+/* ---------------- about ---------------- */
+
+.team-member-about {
+  background-color: #f1f2f3;
+  padding: 80px 0;
+}
+
+.team-member-about-main {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.team-member-about-text {
+  flex: 1;
+  max-width: 975px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.yellow-bar {
+  flex: none;
+  width: 6px;
+  height: 109px;
+  background-color: var(--color--brand);
+}
+
+.team-member-about-content {
+  flex: 1;
+  max-width: 880px;
+}
+
+.team-member-about-description {
+  margin-bottom: 60px;
+}
+
+.team-member-about-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.about-skills-options {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.skills-description {
+  flex: 1;
+  max-width: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skills-big-text {
+  font-family: var(--font-family--heading);
+  color: var(--color--heading-color);
+  writing-mode: vertical-rl;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 64px;
+  flex: none;
+}
+
+.skills-text-small {
+  font-size: 48px;
+}
+
+/* ---------------- instructor courses ---------------- */
+
+.team-member-courses {
+  padding: 80px 0 90px;
+}
+
+.member-courses-heading {
+  margin-bottom: 40px;
+}
+
+.course-wrap-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.team-member-courses .course-wrap-main {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.team-member-courses .course-three-image {
+  width: 100%;
+  height: 510px;
+  object-fit: cover;
+  display: block;
+}
+
+.course-card-three-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8) 74%);
+  z-index: 2;
+}
+
+.course-card-three-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.course-name-three-gap {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.team-member-courses .course-three-rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.team-member-courses .course-three-rating img {
+  width: 60px;
+}
+
+.course-three-buttons {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.course-three-buttons .full-grow {
+  width: 100%;
+  text-align: center;
+}
+
+.team-member-courses .course-three-cards-border-one,
+.team-member-courses .course-three-cards-border-two {
+  position: absolute;
+  background-color: var(--color--white);
+  z-index: 4;
+  transition: all 0.4s ease;
+}
+
+.team-member-courses .course-three-cards-border-one {
+  top: 20px;
+  left: 20px;
+  width: 168px;
+  height: 1px;
+}
+
+.team-member-courses .course-three-cards-border-two {
+  top: 20px;
+  left: 20px;
+  width: 1px;
+  height: 160px;
+}
+
+.team-member-courses .course-wrap-main:hover .course-three-cards-border-one {
+  width: calc(100% - 40px);
+}
+
+.team-member-courses .course-wrap-main:hover .course-three-cards-border-two {
+  height: calc(100% - 40px);
+}
+
+.team-member-courses .course-three-price {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 74px;
+  height: 74px;
+  border-radius: 100%;
+  background-color: var(--color--heading-color);
+  color: var(--color--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-desktop--h5, 20px);
+  z-index: 4;
+}
+
+/* ---------------- awards ---------------- */
+
+.team-details-awards {
+  background-color: rgba(255, 182, 6, 0.06);
+  padding: 80px 0;
+}
+
+.team-details-awards-top {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1220px;
+  margin-bottom: 55px;
+}
+
+.team-details-awards-left {
+  flex: 1;
+  max-width: 455px;
+}
+
+.team-details-awards-right {
+  flex: 1;
+  max-width: 374px;
+}
+
+.team-details-awards-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  max-width: 1210px;
+}
+
+.awards-cards {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.awards-year {
+  writing-mode: vertical-rl;
+  font-size: 110px;
+  font-weight: 600;
+  line-height: 84px;
+  background-image: linear-gradient(90deg, rgba(27, 44, 48, 0.15), rgba(27, 44, 48, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  flex: none;
+}
+
+.awards-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 10px;
+}
+
+.awards-content img {
+  height: 30px;
+  width: auto;
+}
+
+/* ---------------- responsive ---------------- */
+
+@media (max-width: 1440px) {
+  .team-member-about {
+    padding: 80px 0;
+  }
+
+  .team-member-courses {
+    padding: 80px 0 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .team-details-marquee-text {
+    letter-spacing: 14px;
+    font-size: 85px;
+    line-height: 70px;
+  }
+
+  .team-members-social {
+    bottom: 100px;
+  }
+
+  .team-member-about {
+    padding: 50px 0;
+  }
+
+  .team-member-about-main {
+    flex-direction: column;
+  }
+
+  .skills-big-text {
+    font-size: 70px;
+    line-height: 54px;
+  }
+
+  .skills-text-small {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .team-member-courses {
+    padding: 50px 0 60px;
+  }
+
+  .course-wrap-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-details-awards {
+    padding: 50px 0;
+  }
+
+  .team-details-awards-bottom {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .awards-year {
+    font-size: 80px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .team-member-details-hero {
+    padding-top: 89px;
+  }
+
+  .team-details-marquee-text {
+    font-size: 60px;
+    line-height: 54px;
+  }
+
+  .team-details-hero-main {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .team-details-hero-image {
+    margin-right: 60px;
+  }
+
+  .team-details-hero-text {
+    max-width: none;
+  }
+
+  .team-members-social {
+    bottom: auto;
+  }
+
+  .team-social-link {
+    transform: none;
+  }
+
+  .team-social-link:hover {
+    transform: scale(1.15);
+  }
+
+  .team-member-about-main {
+    gap: 14px;
+  }
+
+  .team-member-about-text {
+    gap: 20px;
+  }
+
+  .yellow-bar {
+    display: none;
+  }
+
+  .team-member-about-description {
+    margin-bottom: 30px;
+  }
+
+  .team-member-about-skills {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .skills-big-text {
+    font-size: 50px;
+    line-height: 44px;
+  }
+
+  .skills-text-small {
+    font-size: 30px;
+    line-height: 24px;
+  }
+
+  .course-wrap-card {
+    grid-template-columns: 1fr;
+  }
+
+  .team-details-awards-top {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .team-details-awards-left,
+  .team-details-awards-right {
+    max-width: none;
+  }
+
+  .awards-year {
+    font-size: 60px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 479px) {
+  .course-card-three-content {
+    padding: 20px;
+  }
+
+  .team-details-awards-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .team-details-awards-bottom .course-three-cards-border-one,
+  .course-three-cards-border-one,
+  .course-three-cards-border-two {
+    top: 10px;
+    left: 10px;
+  }
+}

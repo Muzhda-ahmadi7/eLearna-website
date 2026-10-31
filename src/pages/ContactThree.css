@@ -1,0 +1,553 @@
+/* ============================== contact-three ============================= */
+
+.contact-three {
+  background-image: linear-gradient(#0009, #0009), url('/assets/img/contact-three-background.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-color: var(--color--heading-color);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-three-main {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  padding: 130px 15px;
+  box-sizing: border-box;
+}
+
+.contact-three-content {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 935px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.contact-big-text {
+  font-family: var(--font-family--heading);
+  color: var(--color--brand);
+  letter-spacing: -12.5px;
+  font-size: clamp(70px, 17vw, 250px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.contact-big-description {
+  opacity: 0.7;
+  color: var(--color--white);
+  max-width: 605px;
+  margin-top: 15px;
+  margin-bottom: 70px;
+}
+
+.contact-three-information-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 558px;
+}
+
+.contact-three-information {
+  color: var(--color--white);
+  font-size: var(--font-size-desktop--h2);
+  font-weight: 300;
+  line-height: 58px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.contact-three-information:hover {
+  color: var(--color--brand);
+}
+
+.contact-three-border {
+  background-color: var(--color--white);
+  opacity: 0.4;
+  width: 100%;
+  height: 1px;
+  margin-top: 23px;
+  margin-bottom: 19px;
+}
+
+/* floating contact button + pop-up form */
+
+.icon-box {
+  z-index: 5;
+  background-color: var(--color--brand);
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  position: fixed;
+  inset: auto 68px 150px auto;
+  padding: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-box img {
+  width: 26px;
+}
+
+.icon-box:hover {
+  transform: scale(1.08);
+}
+
+.contact-three-form-pop-up {
+  z-index: 40;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  transform-origin: 100% 100%;
+  background-color: #ffffff3d;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 390px;
+  position: fixed;
+  inset: auto 68px 250px auto;
+  max-height: calc(100vh - 370px);
+  max-height: calc(100dvh - 370px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.contact-three-form-pop-up.is-open {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contact-three-form-top {
+  background-color: var(--color--brand);
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+.contact-form-close {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--color--heading-color);
+  font-size: 18px;
+  line-height: 1;
+  padding: 8px;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+.contact-form-close:hover {
+  opacity: 0.6;
+}
+
+.contact-three-form-inside {
+  padding: 40px;
+  display: flex;
+  flex-flow: column;
+}
+
+.text-field-two {
+  color: var(--color--white);
+  font-size: var(--font-size-desktop--body);
+  background-color: #ffffff1a;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  height: 50px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+  font-family: var(--font-family--body);
+}
+
+.text-field-two::placeholder {
+  color: #fff9;
+}
+
+.text-field-two:focus {
+  outline: none;
+  border-color: var(--color--brand);
+}
+
+.button-full-width {
+  width: 100%;
+  cursor: pointer;
+  font-family: var(--font-family--body);
+}
+
+.contact-three-form-done {
+  background-color: var(--color--brand);
+  color: var(--color--heading-color);
+  text-align: center;
+  padding: 60px 30px;
+  font-weight: 500;
+}
+
+/* compact footer */
+
+.contact-three-footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: fixed;
+  inset: auto 0% 0%;
+}
+
+.contact-three-container {
+  max-width: 1780px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contact-three-container.top-border {
+  border-top: 1px solid #ffffff1a;
+}
+
+.contact-three-footer-main {
+  display: flex;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-footer-links-wrapper {
+  display: flex;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-small-link {
+  color: var(--color--white);
+  font-size: var(--font-size-mobile--small-heading-m);
+  text-transform: uppercase;
+  line-height: 17px;
+  text-decoration: none;
+}
+
+.footer-small-link:hover {
+  color: var(--color--brand);
+}
+
+.small-heading.small-heading-mobile {
+  font-size: var(--font-size-mobile--small-heading-m);
+}
+
+/* ============================== breakpoints =============================== */
+
+@media screen and (max-width: 991px) {
+  .contact-big-text {
+    letter-spacing: -6px;
+  }
+
+  .contact-three-information {
+    font-size: var(--font-size-tab--h2-t);
+    line-height: 47px;
+  }
+
+  .contact-three-border {
+    margin-top: 15px;
+    margin-bottom: 13px;
+  }
+
+  .icon-box {
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-big-text {
+    letter-spacing: -3px;
+  }
+
+  .contact-big-description {
+    margin-bottom: 36px;
+  }
+
+  .contact-three-information {
+    font-size: var(--font-size-mobile--h1-m);
+    line-height: 43px;
+  }
+
+  .icon-box {
+    bottom: 128px;
+    right: 15px;
+  }
+
+  .contact-three-form {
+    z-index: 39;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    inset: 0%;
+    padding: 90px 15px;
+    pointer-events: none;
+  }
+
+  .contact-three-form-pop-up {
+    inset: auto;
+    position: static;
+    width: 100%;
+    max-width: 390px;
+    max-height: calc(100vh - 180px);
+    max-height: calc(100dvh - 180px);
+    pointer-events: none;
+  }
+
+  .contact-three-footer-main {
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    gap: 15px;
+    flex-flow: column;
+  }
+
+  .text-field-two::placeholder {
+    font-size: var(--font-size-mobile--button-m);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contact-three-main {
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    max-height: none;
+    padding-top: 144px;
+    padding-bottom: 170px;
+  }
+
+  .contact-big-description {
+    margin-bottom: 24px;
+  }
+
+  .contact-three-information {
+    font-size: var(--font-size-mobile--h3-m);
+  }
+
+  .contact-three-border {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .icon-box {
+    margin-left: auto;
+    margin-right: 15px;
+    bottom: 190px;
+    right: 15px;
+    position: fixed;
+  }
+
+  .contact-three-form-pop-up {
+    width: 93%;
+    max-width: none;
+  }
+
+  .contact-three-form-inside {
+    padding: 30px;
+  }
+
+  .contact-footer-links-wrapper {
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    gap: 15px;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ------------------------- short viewports ------------------------------- */
+
+@media screen and (min-width: 768px) and (max-height: 820px) {
+  .contact-three-main {
+    min-height: calc(100vh - 70px);
+    padding-top: 120px;
+    padding-bottom: 70px;
+  }
+
+  .contact-big-description {
+    margin-bottom: 36px;
+  }
+
+  .icon-box {
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+/* footer stays fixed once the content clears it */
+@media screen and (min-width: 768px) and (min-height: 710px) and (max-height: 820px) {
+  .icon-box {
+    bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-height: 709px) {
+  .contact-three-footer {
+    position: static;
+  }
+}
+
+@media screen and (max-height: 820px) {
+  .contact-three-form {
+    z-index: 39;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    inset: 0%;
+    padding: 120px 15px 90px;
+    pointer-events: none;
+  }
+
+  .contact-three-form-pop-up {
+    inset: auto;
+    position: static;
+    width: 100%;
+    max-width: 390px;
+    max-height: calc(100vh - 210px);
+    max-height: calc(100dvh - 210px);
+    pointer-events: none;
+  }
+
+  .contact-three-form-pop-up.is-open {
+    pointer-events: auto;
+  }
+
+  /* compact the form so it fits short viewports without scrolling */
+  .contact-three-form-top {
+    padding: 10px 44px 10px 10px;
+  }
+
+  .contact-three-form-inside {
+    padding: 24px;
+  }
+
+  .text-field-two {
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
+  .text-field-two.margin-bottom-thirty {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px), screen and (max-height: 820px) {
+  .contact-three.form-open .icon-box {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* very short viewports (laptops with small windows, phones in landscape) */
+
+@media screen and (max-height: 590px) {
+  .contact-three-form {
+    padding: 112px 15px 10px;
+  }
+
+  .contact-three-form-pop-up {
+    max-height: calc(100vh - 122px);
+    max-height: calc(100dvh - 122px);
+  }
+
+  .contact-three-form-top {
+    padding: 7px 44px 7px 10px;
+  }
+
+  .contact-three-form-inside {
+    padding: 16px;
+  }
+
+  .text-field-two {
+    height: 42px;
+    margin-bottom: 8px;
+  }
+
+  .text-field-two.margin-bottom-thirty {
+    margin-bottom: 14px;
+  }
+
+  .contact-three-form-inside .button-full-width {
+    height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) and (max-height: 600px) {
+  .contact-three-footer {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 479px) and (max-height: 600px) {
+  .icon-box {
+    bottom: 24px;
+  }
+}
+
+/* phones in landscape */
+
+@media screen and (max-height: 420px) {
+  .contact-three-form-inside {
+    padding: 12px;
+  }
+
+  .contact-three-form-top {
+    padding: 4px 40px 4px 8px;
+  }
+
+  .text-field-two {
+    height: 36px;
+    margin-bottom: 6px;
+  }
+
+  .text-field-two.margin-bottom-thirty {
+    margin-bottom: 10px;
+  }
+
+  .contact-three-form-inside .button-full-width {
+    height: 38px;
+  }
+
+  .contact-form-close {
+    font-size: 16px;
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 767px) and (max-height: 420px) {
+  .contact-three-form {
+    padding: 76px 15px 8px;
+  }
+
+  .contact-three-form-pop-up {
+    max-height: calc(100vh - 84px);
+    max-height: calc(100dvh - 84px);
+  }
+}

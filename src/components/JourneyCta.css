@@ -1,0 +1,138 @@
+/* Journey CTA - `.cta-one` (dark panel) and `.cta-three` (office photo) */
+
+.cta-one {
+  z-index: 2;
+  margin-bottom: -100px;
+  position: relative;
+}
+
+.cta-main {
+  display: flex;
+  gap: 20px;
+  background-color: var(--color--brand);
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 30px;
+}
+
+.cta-main.cta-two-main {
+  background-color: var(--color--heading-color);
+}
+
+.cta-heading {
+  max-width: 420px;
+}
+
+.cta-button-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button.white-border-button {
+  border-color: var(--color--white);
+  background-color: #0f252a00;
+}
+
+.button.white-border-button:hover {
+  background-color: var(--color--white);
+  color: var(--color--heading-color);
+}
+
+.button.black-border-button {
+  border-color: var(--color--heading-color);
+  color: var(--color--heading-color);
+  background-color: #0f252a00;
+}
+
+.button.black-border-button:hover {
+  background-color: var(--color--heading-color);
+  color: var(--color--white);
+}
+
+.cta-three {
+  background-image: linear-gradient(#0a171a66, #0a171a66),
+    url('/assets/img/office-image.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  padding: 135px 15px;
+}
+
+.cta-three-container {
+  max-width: 1084px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.cta-three-main {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .cta-main {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .cta-button-wrapper {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cta-main {
+    gap: 30px;
+    text-align: center;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+  }
+  .cta-main.cta-two-main {
+    padding-top: 30px;
+  }
+  .cta-heading {
+    max-width: none;
+  }
+  .cta-three {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .cta-three-main {
+    gap: 26px;
+    text-align: center;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cta-main {
+    gap: 20px;
+  }
+  .cta-button-wrapper {
+    flex-flow: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .cta-three {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .cta-main {
+    padding: 20px;
+  }
+  .cta-main.cta-two-main {
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,67 @@
+/* ============================================================
+   404 / not found page
+   ============================================================ */
+
+.utility-page-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 15px;
+  background-image: linear-gradient(rgba(15, 37, 42, 0.87), rgba(15, 37, 42, 0.87)),
+    url('/assets/img/404-image.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+}
+
+.utility-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.not-found-number {
+  font-family: var(--font-family--heading);
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 159px;
+  background-image: linear-gradient(
+    180deg,
+    var(--color--light-blue) 13%,
+    var(--color--deep-blue) 100%,
+    var(--color--deep-green)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.not-found-heading {
+  color: var(--color--light-blue);
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.utility-page-content .margin-bottom-twenty-five {
+  color: var(--color--white);
+  opacity: 0.8;
+  max-width: 500px;
+}
+
+@media (max-width: 991px) {
+  .not-found-number {
+    font-size: 150px;
+    line-height: 130px;
+  }
+}
+
+@media (max-width: 479px) {
+  .not-found-number {
+    font-size: 125px;
+    line-height: 108px;
+  }
+}
