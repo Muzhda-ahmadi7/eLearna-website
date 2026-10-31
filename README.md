@@ -26,8 +26,13 @@ Published at <https://muzhda-ahmadi7.github.io/eLearna-website/> by
 `.github/workflows/deploy-pages.yml` on every push to `main`.
 
 One-time setup: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-The workflow also re-points an already-enabled Pages site at the Actions source on every run, so a
-site created with "Deploy from a branch" self-corrects on the next push.
+
+Until that switch is made, Pages also builds the branch itself (Jekyll) on every push, which
+publishes the repository root — the dev `index.html` — and leaves a blank page. Since Pages
+deployments are last-write-wins, the workflow waits for that branch build and then deploys, so the
+built app is what stays live. The wait is harmless once the source is GitHub Actions; the API
+token of the workflow cannot change the source itself (`403 Resource not accessible by
+integration`).
 
 Pages-specific details:
 
